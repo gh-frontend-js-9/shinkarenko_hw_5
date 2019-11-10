@@ -1,0 +1,44 @@
+.content
+    margin: 50px auto
+
+    &__block
+        display: flex
+        flex-direction: column
+
+    &-column
+        max-width: 255px
+        margin-bottom: 30px
+
+    &-column:last-child
+        margin: 0
+
+    &-column__title
+        max-width: 150px
+        margin-bottom: 25px
+
+    &-column__text
+        margin-bottom: 25px
+
+@media screen and ( min-width: 576px )
+    .content
+        &__block
+            flex-direction: row
+
+        &-column
+            margin-bottom: 0
+
+        &-column:last-child
+            margin: 30px auto 0
+
+@media screen and ( min-width: 795px )
+    .content
+        margin-top: 85px
+        margin-bottom: 105px
+
+        &-column:last-child
+            margin: 0 
+            
+        &-column__text
+            margin-bottom: 30px
+        
+    
