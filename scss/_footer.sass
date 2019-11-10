@@ -1,0 +1,21 @@
+.footer
+    display: flex
+    flex-direction: column
+    margin: 35px auto
+    
+    &-menu
+        width: 130px
+        margin-bottom: 15px
+
+    &__text
+        text-align: center
+
+@media screen and ( min-width: 576px  )
+    .footer
+        flex-direction: row
+    
+        &-menu
+            margin-bottom: 0
+
+        &__text
+            text-align: left

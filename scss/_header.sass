@@ -1,0 +1,119 @@
+.hero
+    height: 100vh
+    padding-bottom: 0
+    background: url(../images/hero/bg.png) center /cover
+
+.header
+    &__logo
+        padding: 30px 10px 10px
+        font-family: Domine
+        font-weight: 700
+        font-size: 20px
+        color: #fff
+        background-color: #fa5c65
+        border-bottom-right-radius: 15px
+        border-bottom-left-radius: 15px
+
+    &__dot
+        color: #314a5b
+        
+    &-menu
+        position: absolute
+        top: 20vh
+        left: 0
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        flex-wrap: wrap
+        align-items: center
+        width: 100%
+        height: 50vh
+        padding: 20px 0
+        background-color: #fff
+        opacity: 0
+        visibility: hidden
+        transition: 0.3s ease-in-out
+
+    &-menu__item
+        font-family: Montserrat
+        font-size: 18px
+        font-weight: 700
+        text-transform: uppercase
+        text-decoration: none
+        color: #263742
+
+    &-menu__item:hover
+        color: #fa5c65
+        transition: 0.2s
+
+/*nav-toggle*/
+
+.nav-toggle
+    position: absolute
+    right: 3%
+    z-index: 10
+    max-width: 25px
+    width: 100%
+    margin: 0 auto
+    padding: 10px 0
+    background: none
+    border: none
+    cursor: pointer
+
+    &:focus+.header-menu
+        opacity: 1
+        visibility: visible
+
+    &__item
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        height: 2px
+        margin: 8px 0
+        background-color: #fa5c65
+
+    &__item::after,
+    &__item::before
+        content: ""
+        position: absolute
+        right: 0px
+        z-index: 10
+        width: 100%
+        height: 2px
+        background-color: #fa5c65
+
+    &__item::before
+        top: -8px
+    
+    &__item::after
+        top: 8px
+
+@media screen and ( min-width:768px )
+    .header
+        &__logo
+            padding: 43px 14px 14px
+
+        &-menu
+            position: relative
+            top: 0
+            flex-direction: row
+            width: 450px
+            height: 0
+            padding: 0
+            opacity: 1
+            visibility: visible
+
+        &-menu__item
+            font-size: 14px
+
+    .nav-toggle
+        opacity: 0
+        visibility: hidden
+    
+
+    
+    
